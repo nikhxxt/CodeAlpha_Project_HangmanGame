@@ -23,9 +23,9 @@ def hangman():
     incorrect_guessses = 0
     max_incorrect_guesses= 6
 
-    while incorrect_guesses < max_incvorrect_guesses:
-    print("\nWord:",display_word(word,guessed_letters))
-    guess = input("Guesss a letter: ").lower()
+    while incorrect_guesses < max_incorrect_guesses:
+        print("\nWord:", display_word(word,guessed_letters))
+        guess = input("Guesss a letter: ").lower()
 
     if len(guesss) != 1 or not guess.isalpha():
          print("Please enter a single alphabetic characyter."
