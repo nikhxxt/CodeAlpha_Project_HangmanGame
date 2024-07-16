@@ -26,28 +26,27 @@ def hangman():
         print("\nWord:", display_word(word,guessed_letters))
         guess = input("Guess a letter: ").lower()
 
-    if len(guess) != 1 or not guess.isalpha():
-         print("Please enter a single alphabetic character.")
-         continue
+        if len(guess) != 1 or not guess.isalpha():
+            print("Please enter a single alphabetic character.")
+            continue
 
-    if guess in guessed_lettters:
-       print("You already guesed that letter! try another one.")
-    elif guess in word:
-        print("Correct!")
-        guessed_letters.append(guess)
-   else:
-       print("Incorrect!")
-       incorrect_guesses += 1
-       guessed_letters.append(guess)
+        if guess in guessed_lettters:
+            print("You already guesed that letter! try another one.")
+        elif guess in word:
+             print("Correct!")
+             guessed_letters.append(guess)
+        else:
+            print("Incorrect!")
+            incorrect_guesses += 1
+            guessed_letters.append(guess)
 
-       if set(word) <= set(guessed_letters):
-          print("\nCongratulations! You guessed the word:", word)
-          break
+        if set(word) <= set(guessed_letters):
+            print("\nCongratulations! You guessed the word:", word)
+            break
 
-       print("Tries left:", max_incorrect_guesses - incorrect_guesses)
+        print("Tries left:", max_incorrect_guesses - incorrect_guesses)
 
-  if incorrect_guesse >= max_incorrect_guesses:
+ if incorrect_guesse >= max_incorrect_guesses:
      print("\nSorry, you ran out of guesses. The word was:",word)
-
 
 hangman()
