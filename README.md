@@ -46,7 +46,7 @@ def hangman():
 
         print("Tries left:", max_incorrect_guesses - incorrect_guesses)
 
- if incorrect_guesse >= max_incorrect_guesses:
+  if incorrect_guesse >= max_incorrect_guesses:
      print("\nSorry, you ran out of guesses. The word was:",word)
 
 hangman()
