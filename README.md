@@ -10,9 +10,8 @@ def display_word(word, guessed_letters):
         if letter in guessed_letters:
            display += letter + " "
         else:
-                display += "_ "
-        return display.strip()
-      
+            display += "_ "
+    return display.strip()
 def hangman():
     print("Welcome to hangman!")
     print("Lets strat the game.")
@@ -25,9 +24,9 @@ def hangman():
 
     while incorrect_guesses < max_incorrect_guesses:
         print("\nWord:", display_word(word,guessed_letters))
-        guess = input("Guesss a letter: ").lower()
+        guess = input("Guess a letter: ").lower()
 
-    if len(guesss) != 1 or not guess.isalpha():
+    if len(guess) != 1 or not guess.isalpha():
          print("Please enter a single alphabetic character.")
          continue
 
