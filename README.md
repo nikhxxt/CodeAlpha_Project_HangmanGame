@@ -30,7 +30,7 @@ def hangman():
             print("Please enter a single alphabetic character.")
             continue
 
-        if guess in guessed_lettters:
+        if guess in guessed_letters:
             print("You already guesed that letter! try another one.")
         elif guess in word:
              print("Correct!")
