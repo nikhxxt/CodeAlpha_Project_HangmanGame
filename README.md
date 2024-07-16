@@ -28,7 +28,7 @@ def hangman():
         guess = input("Guesss a letter: ").lower()
 
     if len(guesss) != 1 or not guess.isalpha():
-         print("Please enter a single alphabetic characyter."
+         print("Please enter a single alphabetic character.")
          continue
 
     if guess in guessed_lettters:
