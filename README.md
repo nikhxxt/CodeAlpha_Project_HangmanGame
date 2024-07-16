@@ -19,7 +19,7 @@ def hangman():
     print("You have only 6 tries to guess the word.")
     word = choose_word()
     guessed_letters = []
-    incorrect_guessses = 0
+    incorrect_guesses = 0
     max_incorrect_guesses= 6
 
     while incorrect_guesses < max_incorrect_guesses:
